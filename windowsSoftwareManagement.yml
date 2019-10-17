@@ -1,1 +1,10 @@
-
+---
+- name:  Windows Software Installation
+  hosts: all
+ 
+  gather_facts: false
+  tasks:
+    - name: Installing Software
+      win_chocolatey:
+        name : git
+        state : present
